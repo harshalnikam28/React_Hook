@@ -4,6 +4,7 @@ const UseStateHook = () => {
   const [count, setCount] = useState(0);
   let [clr, setclr] = useState("white");
   let [text, settext] = useState("black");
+  let [front, setfront] = useState(20);
   return (
     <>
       <div className="w-50 mx-auto bordar border-secondary round-4 d-flex flex-column">
@@ -41,6 +42,11 @@ const UseStateHook = () => {
         <button onClick={() => [setclr("darkblue"), settext("white")]}>
           Dark Theme
         </button>
+      </div>
+      <div>
+        <h1 style={{ fontSize: front }}>Harshal</h1>
+        <button onClick={() => setfront(front + 1)}> Front++</button>
+        <button onClick={() => setfront(front - 1)}> Front--</button>
       </div>
     </>
   );
